@@ -1,0 +1,113 @@
+/* Estilos generales */
+.app-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #eb0909, #f7e708);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacio entre contenido principal y footer */
+  color: #333;
+}
+
+.app-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra para el texto */
+  animation: glow 2s infinite alternate; /* Efecto de brillo */
+}
+
+/* Animación de brillo para el título */
+@keyframes glow {
+  from {
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    text-shadow: 4px 4px 15px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Estilos para la lista de películas */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Contenedor de la tarjeta de película */
+.movie-card {
+  width: 200px; /* Ancho fijo para las tarjetas */
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  cursor: pointer;
+  margin: 15px;
+  border: 2px solid transparent; /* Borde inicial invisible */
+}
+
+.movie-card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  border: 2px solid #ff9a9e; /* Borde resaltado */
+}
+
+/* Estilo de la imagen de la película */
+.movie-image {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+  border-bottom: 3px solid #f1f1f1; /* Línea separadora entre la imagen y el texto */
+  transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+.movie-card:hover .movie-image {
+  transform: scale(1.1); /* Escala la imagen al pasar el ratón */
+}
+
+/* Estilos para el título y género */
+.movie-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.movie-card p {
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(45deg, #f08903, #10e4d956);
+  padding: 15px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra superior */
+  border-radius: 15px 15px 0 0; /* Bordes redondeados superiores */
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease; /* Transición de color */
+}
+
+.footer a:hover {
+  color: #333; /* Cambia a un color oscuro al pasar el ratón */
+}
+
+.footer span {
+  font-style: italic;
+}
