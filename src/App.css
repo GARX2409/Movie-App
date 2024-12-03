@@ -1,3 +1,4 @@
+
 /* Estilos generales */
 .app-container {
   font-family: Arial, sans-serif;
@@ -59,8 +60,8 @@
 /* Estilo de la imagen de la película */
 .movie-image {
   width: 100%; /* Ajusta el ancho al 100% del contenedor */
-  height: 300px; /* Altura fija */
-  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+  height: auto; /* Mantiene la relación de aspecto */
+  object-fit: cover; /* Ajusta la imagen para rellenar el contenedor y recortar el exceso */
   border-bottom: 3px solid #f1f1f1; /* Línea separadora entre la imagen y el texto */
   transition: transform 0.3s ease; /* Transición para el efecto hover */
 }

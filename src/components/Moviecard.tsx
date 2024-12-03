@@ -6,13 +6,13 @@ interface MovieCardProps {
   movie: Movie;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+const Moviecard: React.FC<MovieCardProps> = ({ movie }) => {
   const imageSrc = new URL(`../assets/img/${movie.image}`, import.meta.url).href;
 
-  const Showdetails= () => {
+  const showDetails = () => {
     Swal.fire({
       title: movie.title,
-      text: `Genre: ${movie.genre}`,
+      text: `Género: ${movie.genre}\nDescripción: ${movie.description}`, // Solo se asigna una vez el texto
       imageUrl: imageSrc,
       imageWidth: 400,
       imageHeight: 200,
@@ -21,7 +21,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   };
 
   return (
-    <div className="movie-card" onClick={Showdetails}>
+    <div className="movie-card" onClick={showDetails}>
       <img src={imageSrc} alt={movie.title} />
       <h3>{movie.title}</h3>
       <p>{movie.genre}</p>
@@ -29,4 +29,4 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   );
 };
 
-export default MovieCard;
+export default Moviecard;
